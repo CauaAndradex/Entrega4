@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ONGConnect — ONGs em destaque</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header reutilizado -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="ONGConnect" class="brand-logo">
+        <span class="brand-name">ONGConnect</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menu">
+      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="projetos.html" class="nav-link is-active">ONGs</a></li>
+          <li class="dropdown">
+            <details>
+              <summary>Mais</summary>
+              <ul class="submenu">
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="cadastro.html" class="btn nav-cta">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Grid 12 com cards responsivos -->
+  <main class="container page projetos">
+    <header class="page-header">
+      <h1 class="h1">ONGs em destaque</h1>
+      <p class="lead">Conheça organizações e apoie causas que você acredita.</p>
+    </header>
+
+    <section class="grid-12 cards-list">
+      <article class="card span-4 lg-span-6 sm-span-12">
+        <div class="card-media">
+          <img src="assets/exemplo1.jpg" alt="Projeto VerdeViva" class="media-cover">
+        </div>
+        <div class="card-body">
+          <div class="tags">
+            <span class="tag green">Meio Ambiente</span>
+            <span class="tag outline">Plantio</span>
+          </div>
+          <h3 class="h4">VerdeViva</h3>
+          <p>Recuperação de áreas verdes e educação ambiental.</p>
+          <div class="card-actions">
+            <a href="#toast-like" class="btn">Curtir</a>
+            <a href="#toast-share" class="btn-ghost">Compartilhar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-4 lg-span-6 sm-span-12">
+        <div class="card-media">
+          <img src="assets/exemplo1.jpg" alt="SaúdeParaTodos" class="media-cover">
+        </div>
+        <div class="card-body">
+          <div class="tags">
+            <span class="tag green">Saúde</span>
+            <span class="tag outline">Prevenção</span>
+          </div>
+          <h3 class="h4">SaúdeParaTodos</h3>
+          <p>Clínicas móveis e programas em comunidades remotas.</p>
+          <div class="card-actions">
+            <a href="#toast-like" class="btn">Curtir</a>
+            <a href="#toast-share" class="btn-ghost">Compartilhar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card span-4 lg-span-6 sm-span-12">
+        <div class="card-media">
+          <img src="assets/exemplo1.jpg" alt="AprenderHoje" class="media-cover">
+        </div>
+        <div class="card-body">
+          <div class="tags">
+            <span class="tag green">Educação</span>
+            <span class="tag outline">Inclusão</span>
+          </div>
+          <h3 class="h4">AprenderHoje</h3>
+          <p>Alfabetização, reforço escolar e inclusão digital.</p>
+          <div class="card-actions">
+            <a href="#toast-like" class="btn">Curtir</a>
+            <a href="#toast-share" class="btn-ghost">Compartilhar</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- toasts sem JS via :target -->
+    <div id="toast-like" class="toast success">Você curtiu! <a href="#" aria-label="fechar">×</a></div>
+    <div id="toast-share" class="toast info">Link copiado! <a href="#" aria-label="fechar">×</a></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>&copy; 2025 ONGConnect</small></div>
+  </footer>
+</body>
+</html>

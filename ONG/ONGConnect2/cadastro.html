@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ONGConnect — Cadastro</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="ONGConnect" class="brand-logo">
+        <span class="brand-name">ONGConnect</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="projetos.html" class="nav-link">ONGs</a></li>
+          <li><a href="cadastro.html" class="nav-link is-active">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+
+
+
+<main class="container page cadastro">
+
+<header class="page-header">
+  <h1 class="h1">Cadastro</h1>
+  <p class="lead">Preencha todas as informações obrigatórias corretamente.</p>
+</header>
+
+<form class="form card grid-12" id="cadastroForm" novalidate>
+
+  <!-- ======================================================
+       GRUPO 1 — DADOS PESSOAIS
+  ======================================================= -->
+  <fieldset class="span-12">
+    <legend class="h3">Dados Pessoais</legend>
+
+    <div class="grid-12">
+
+      <div class="span-6 md-span-12">
+        <label class="label">Nome Completo *</label>
+        <input type="text" required minlength="3" placeholder="Seu nome completo">
+        <span class="error-text">Digite um nome válido.</span>
+      </div>
+
+      <div class="span-6 md-span-12">
+        <label class="label">E-mail *</label>
+        <input type="email" required placeholder="exemplo@dominio.com">
+        <span class="error-text">Digite um e-mail válido.</span>
+      </div>
+
+      <div class="span-6 md-span-12">
+        <label class="label">CPF *</label>
+        <input type="text" id="cpfInput" required maxlength="14" placeholder="000.000.000-00">
+        <span class="error-text">Digite um CPF válido.</span>
+      </div>
+
+      <div class="span-6 md-span-12">
+        <label class="label">Telefone *</label>
+        <input type="tel" id="telInput" required maxlength="15" placeholder="(00) 00000-0000">
+        <span class="error-text">Digite um telefone válido.</span>
+      </div>
+
+      <div class="span-6 md-span-12">
+        <label class="label">Data de Nascimento *</label>
+        <input type="date" required>
+        <span class="error-text">Selecione uma data válida.</span>
+      </div>
+
+    </div>
+  </fieldset>
+
+
+  <!-- ======================================================
+       GRUPO 2 — ENDEREÇO
+  ======================================================= -->
+  <fieldset class="span-12">
+    <legend class="h3">Endereço</legend>
+
+    <div class="grid-12">
+
+      <div class="span-4 md-span-12">
+        <label class="label">CEP *</label>
+        <input type="text" id="cepInput" required maxlength="9" placeholder="00000-000">
+        <span class="error-text">Digite um CEP válido.</span>
+      </div>
+
+      <div class="span-8 md-span-12">
+        <label class="label">Endereço *</label>
+        <input type="text" required placeholder="Rua, número e complemento">
+        <span class="error-text">Digite um endereço válido.</span>
+      </div>
+
+      <div class="span-6 md-span-12">
+        <label class="label">Cidade *</label>
+        <input type="text" required placeholder="Digite sua cidade">
+        <span class="error-text">Digite uma cidade válida.</span>
+      </div>
+
+      <div class="span-6 md-span-12">
+        <label class="label">Estado *</label>
+        <select required>
+          <option value="">Selecione...</option>
+          <option>SP</option><option>RJ</option><option>MG</option><option>ES</option>
+          <option>RS</option><option>SC</option><option>PR</option><option>BA</option>
+        </select>
+        <span class="error-text">Selecione um estado válido.</span>
+      </div>
+
+    </div>
+  </fieldset>
+
+
+  <!-- ======================================================
+       DESCRIÇÃO / EXTRA
+  ======================================================= -->
+  <fieldset class="span-12">
+    <legend class="h3">Descrição</legend>
+    <textarea rows="5" placeholder="Fale sobre você ou sua ONG"></textarea>
+  </fieldset>
+
+
+  <!-- BOTÕES -->
+  <div class="span-12 form-actions">
+    <button type="submit" class="btn">Enviar</button>
+    <button type="reset" class="btn-ghost">Limpar</button>
+  </div>
+
+</form>
+
+<!-- Toast de sucesso -->
+<div id="toast-sucesso" class="toast success">
+  Cadastro enviado com sucesso! <a href="#">×</a>
+</div>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <small>&copy; 2025 ONGConnect</small>
+  </div>
+</footer>
+
+<script src="js/cadastro.js"></script>
+</body>
+</html>

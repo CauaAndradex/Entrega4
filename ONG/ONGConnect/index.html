@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ONGConnect — Conectar & Ajudar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- =========================================================
+       Header global + Navegação (dropdown + hambúrguer CSS)
+       ========================================================= -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="ONGConnect" class="brand-logo">
+        <span class="brand-name">ONGConnect</span>
+      </a>
+
+      <!-- controle mobile (checkbox hack) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menu">
+      <label for="nav-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link is-active">Início</a></li>
+          <li><a href="projetos.html" class="nav-link">ONGs</a></li>
+          <li class="dropdown">
+            <!-- submenu com details/summary (acessível e sem JS) -->
+            <details>
+              <summary>Mais</summary>
+              <ul class="submenu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#como-ajudar">Como ajudar</a></li>
+                <li><a href="#contato">Contato</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="cadastro.html" class="btn nav-cta">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       Layout principal com Grid 12 colunas
+       ========================================================= -->
+  <main class="container">
+    <!-- Hero usa grid-12 + flex internamente -->
+    <section class="hero grid-12">
+      <div class="hero-text span-7 md-span-12">
+        <h1 class="h1">Conectar. Apoiar. Transformar.</h1>
+        <p class="lead">Encontre projetos sociais, descubra ONGs e contribua com causas próximas de você.</p>
+        <div class="hero-actions">
+          <a href="projetos.html" class="btn">Ver ONGs</a>
+          <a href="#modal-news" class="btn-ghost">Novidades</a>
+        </div>
+        <!-- alerta exemplo -->
+        <div class="alert info" role="status">
+          <strong>Info:</strong> Projeto acadêmico — layout responsivo com grid de 12 colunas.
+        </div>
+      </div>
+
+      <figure class="hero-media span-5 md-span-12">
+        <img src="assets/logo.png" alt="Ilustração de voluntariado" class="media-cover">
+        <figcaption class="muted">Ilustração institucional</figcaption>
+      </figure>
+    </section>
+
+    <!-- features em cards (grid, badges/tags) -->
+    <section class="features grid-12">
+      <article class="card span-4 md-span-6 sm-span-12">
+        <div class="card-body">
+          <div class="badge green">Ambiental</div>
+          <h3 class="h4">Projetos Relevantes</h3>
+          <p>Descubra iniciativas de meio ambiente, educação e saúde com impacto local.</p>
+        </div>
+      </article>
+
+      <article class="card span-4 md-span-6 sm-span-12">
+        <div class="card-body">
+          <div class="badge yellow">Cadastro</div>
+          <h3 class="h4">Cadastro Simples</h3>
+          <p>Cadastre sua ONG ou voluntariado em poucos passos.</p>
+        </div>
+      </article>
+
+      <article class="card span-4 md-span-6 sm-span-12">
+        <div class="card-body">
+          <div class="badge gray">Transparência</div>
+          <h3 class="h4">Doações Seguras</h3>
+          <p>Direcione doações com clareza e feedback.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta grid-12">
+      <div class="span-12 text-center">
+        <h2 class="h2">Pronto para apoiar uma causa?</h2>
+        <p class="lead">Toda ajuda conta. Conheça as ONGs em destaque.</p>
+        <a href="projetos.html" class="btn">Ver ONGs agora</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal sem JS via :target -->
+  <div id="modal-news" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <h3 id="modal-title" class="h3">Novidades</h3>
+      <p>Versão 3: grid de 12 colunas, 5 breakpoints, navegação com dropdown e menu mobile.</p>
+      <a href="#" class="btn">Fechar</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 ONGConnect</small>
+    </div>
+  </footer>
+</body>
+</html>
