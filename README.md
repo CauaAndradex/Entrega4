@@ -160,25 +160,16 @@ Implementações:
 
 ---
 
-## 💡 Como Executar o Projeto
 
-```bash
-git clone https://github.com/CauaAndradeX/ONGConnect.git
-cd ONGConnect
 
-# Abrir no VS Code
-code .
 
-# Executar com Live Server
-Clique com o botão direito no index.html
-→ “Open With Live Server”
-👨‍💻 Autores
+## 👨‍💻 Autores
 Cauã de Andrade Silva
 Nicollas Santana de Sousa
 
 Desenvolvedores Front-End | Criadores da ONGConnect
 
-📝 Licença
+## 📝 Licença
 Licença MIT — livre para fins acadêmicos e educacionais.
 
 “Conectar, apoiar e transformar — esse é o poder do código.”
