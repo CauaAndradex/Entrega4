@@ -35,9 +35,6 @@ ONGConnect/
 │
 └── assets/
 ├── logo.png
-├── exemplo1.jpg
-└── demais imagens
-
 ```
 
 ---
