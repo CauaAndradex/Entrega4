@@ -169,10 +169,11 @@ Nicollas Santana de Sousa
 
 Desenvolvedores Front-End | Criadores da ONGConnect
 
+---
+
 ## 📝 Licença
 Licença MIT — livre para fins acadêmicos e educacionais.
 
 “Conectar, apoiar e transformar — esse é o poder do código.”
 
-yaml
-Copiar código
+
