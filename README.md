@@ -1,239 +1,186 @@
-🌱 ONGConnect — Plataforma de Conexão entre ONGs, Voluntários e Doadores
-📖 Descrição do Projeto
+# 🌱 ONGConnect — Plataforma de Conexão entre ONGs, Voluntários e Doadores
 
-O ONGConnect é uma plataforma web desenvolvida como atividade acadêmica, simulando um sistema real de apoio a ONGs, voluntários e doadores.
-O projeto utiliza HTML5, CSS3, JavaScript (ES Modules) e inclui um SPA básico, além das versões HTML tradicionais para cumprir todos os requisitos do trabalho.
+## 📖 Descrição do Projeto
+O **ONGConnect** é uma plataforma web criada como atividade acadêmica, simulando um sistema completo de apoio a ONGs, voluntários e doadores.  
+O projeto foi desenvolvido utilizando **HTML5, CSS3 e JavaScript (ES Modules)**, incluindo:
 
-A aplicação conta com:
+- ✔ Uma **SPA (Single Page Application)** funcional  
+- ✔ Páginas HTML independentes (index, projetos e cadastro)  
+- ✔ Formulário completo com máscaras e validações  
+- ✔ Sistema de doações com modais  
+- ✔ Toasts, alerts e interação moderna  
+- ✔ Design system + grid de 12 colunas + responsividade  
+- ✔ Padrões de acessibilidade WCAG 2.1 AA  
 
-🏠 Página Inicial (index) — apresentação da plataforma.
+---
 
-🧩 Página de Projetos (projetos) — lista de ONGs, sistema de doações e interação.
+## 🧩 Estrutura do Projeto
 
-📝 Página de Cadastro (cadastro) — formulário completo com validações e máscaras.
-
-⚡ SPA (Single Page Application) para navegação dinâmica.
-
-O objetivo é demonstrar domínio de:
-✔ estrutura HTML5 semântica
-✔ responsividade
-✔ acessibilidade (WCAG 2.1 nível AA)
-✔ manipulação do DOM
-✔ modularização JS
-✔ máscaras de input
-✔ UX moderna com grids, modais e toasts
-
-🧩 Estrutura do Projeto
 ONGConnect/
 │
-├── index.html              # Página Home (HTML independente + versão SPA)
-├── projetos.html           # Listagem das ONGs + Doações
-├── cadastro.html           # Formulário completo HTML5
+├── index.html # Página Home (SPA + versão HTML)
+├── projetos.html # Listagem das ONGs
+├── cadastro.html # Formulário completo
 │
 ├── css/
-│   └── style.css           # Design System + Grid + Componentes + Modais
+│ └── style.css # Design system, grid, componentes e modais
 │
 ├── js/
-│   ├── app.js              # Controlador SPA
-│   ├── templates.js        # Páginas do SPA (home, projetos, cadastro)
-│   ├── form.js             # Máscaras, validações e lógica dos formulários
-│   └── masks.js            # Máscaras de CPF, telefone e CEP
+│ ├── app.js # SPA Controller
+│ ├── templates.js # Telas da SPA
+│ ├── form.js # Validação e máscaras
+│ └── masks.js # Máscaras de CPF, telefone, CEP
 │
 └── assets/
-    ├── logo.png            # Logo oficial ONGConnect
-    ├── exemplo1.jpg        # Imagens de exemplo para ONGs
-    └── (outros arquivos)
+├── logo.png
+├── exemplo1.jpg
+└── demais imagens
 
-🎨 Design System
+markdown
+Copiar código
 
-O projeto utiliza um sistema de design completo, incluindo:
+---
 
-🎨 Paleta de cores (8+ tons)
+## 🎨 Sistema de Design
 
-Verdes (primárias): #2b6b3a, #46a067, #a8e0b1
+### 🎨 Paleta de Cores
+- **Verde primário:** `#2b6b3a`, `#46a067`, `#a8e0b1`
+- **Destaques:** âmbar (`#ffd166`), azul (`#2a9d8f`)
+- **Neutras:** `#0b0b0b` → `#ededed`
+- **Background:** `#fbfdfb`
 
-Destaques: âmbar e azul
+### 🔤 Tipografia
+5 níveis hierárquicos:
+- fs-900  
+- fs-800  
+- fs-700  
+- fs-600  
+- fs-500  
 
-Tons neutros: #0b0b0b → #ededed
+### 📐 Sistema de grid e espaçamento
+- Grid **12 colunas**
+- 5 breakpoints:
+  - 480px  
+  - 640px  
+  - 768px  
+  - 1024px  
+  - 1280px  
+- Escala modular (8 → 64px)
 
-Background suave: #fbfdfb
+---
 
-🔤 Tipografia
+## ⚙️ Funcionalidades JavaScript
 
-Hierarquia com 5 níveis (fs-900 → fs-500)
+### 🖥 SPA Completa
+- Navegação dinâmica usando `data-route`
+- Conteúdo injetado no `<main id="app">`
+- Atualização automática do menu ativo
 
-📐 Sistema de espaçamento
-
-Escala modular (8px → 64px)
-
-🔲 Layout Responsivo
-
-CSS Grid de 12 colunas
-
-Flexbox para componentes
-
-5 breakpoints:
-
-480px (xs)
-640px (sm)
-768px (md)
-1024px (lg)
-1280px (xl)
-
-⚙️ Funcionalidades JavaScript
-🖥 SPA (Single Page Application)
-
-Navegação via data-route
-
-Sem reload
-
-Conteúdo injetado no <main id="app">
-
-🧾 Formulário com validação avançada
-
-Nome completo
-
-Email obrigatório com formato válido
-
-CPF com máscara automática
-
-Telefone com máscara automática
-
-CEP com máscara automática
-
-Data de nascimento
-
-Endereço completo (logradouro, cidade, estado)
+### 🧾 Formulário com validações avançadas
+Inputs utilizados:
+- Nome completo  
+- E-mail  
+- CPF  
+- Telefone  
+- Data de nascimento  
+- Endereço completo  
+- CEP  
+- Cidade  
+- Estado  
 
 Validações:
-✔ obrigatoriedade
-✔ limites de caracteres
-✔ validação HTML5
-✔ highlight verde/vermelho automático
-✔ alerta visual e toast de sucesso
+- HTML5 (`required`, `type`, `pattern`, `minlength`, `maxlength`)
+- Mensagens de erro
+- Bordas coloridas via CSS (`valid` / `invalid`)
+- Máscaras dinâmicas em:
+  - CPF
+  - Telefone
+  - CEP
 
-🎭 Máscaras (JavaScript Nativo)
+### 🎁 Sistema de Doações
+- 3 ONGs cadastradas
+- Abertura de modal via `:target`
+- Campo de valor obrigatório
+- Toast de sucesso após doação
 
-CPF → 000.000.000-00
+### 🧱 Componentes criados
+- Botões (com hover/focus/active)
+- Cards responsivos
+- Badges & tags
+- Alertas
+- Toasts animados
+- Modais acessíveis
 
-Telefone → (00) 00000-0000
+---
 
-CEP → 00000-000
+## ♿ Acessibilidade (WCAG 2.1 AA)
 
-🎁 Simulação de Doações
+Implementações:
+- Navegação completa por teclado  
+- Foco visível em elementos interativos  
+- Contraste dentro do mínimo recomendado  
+- Estrutura HTML semântica  
+- Texto alternativo em todas as imagens  
+- Labels associados aos inputs  
+- Menu mobile com `aria-label`
 
-3 ONGs ativas
+---
 
-Cada ONG possui um botão "Doar"
+## 🚀 Desempenho
+- Código modular  
+- CSS otimizado  
+- Estrutura leve  
+- Carregamento rápido  
 
-Abre modal de doação via :target
+---
 
-Campo de valor
+## 🔐 Segurança
+- Validação nativa + JS  
+- Campos higienizados  
+- Regex para inputs críticos  
 
-Feedback visual com toast de sucesso
+---
 
-⚙️ Outros Recursos JS
+## 🧠 Metodologias e Versionamento
+- Padrão **GitFlow**  
+- **Commits Semânticos**  
+- Organização lógica de pastas  
+- SPA + HTML estático  
 
-Atualização automática do menu ativo
+---
 
-Sistema modular (import/export)
+## 🧰 Tecnologias Utilizadas
+- **HTML5**  
+- **CSS3**  
+- **JavaScript (ES Modules)**  
+- **Flexbox**  
+- **CSS Grid**  
+- **Git + GitHub**  
 
-Validação do formulário dentro do SPA
+---
 
-♿ Acessibilidade (WCAG 2.1 AA)
+## 💡 Como Executar o Projeto
 
-O projeto segue boas práticas como:
-
-Navegação por teclado (TAB)
-
-Labels conectados aos inputs
-
-Contraste mínimo de 4.5:1
-
-Texto alternativo em todas as imagens
-
-Estrutura semântica completa:
-
-<header>
-
-<main>
-
-<section>
-
-<article>
-
-<footer>
-
-<nav>
-
-Foco visível em botões e inputs
-
-Modais acessíveis
-
-Navegação mobile com hambúrguer acessível (aria-label)
-
-🚀 Desempenho
-
-Minificação recomendada
-
-Estrutura otimizada
-
-Toasts e modais leves
-
-Carregamento rápido
-
-Código modular
-
-🔐 Segurança
-
-Validações no front-end
-
-Inputs higienizados
-
-Boas práticas de formulário
-
-🧠 Metodologias e Versionamento
-
-Commits Semânticos
-
-GitFlow
-
-Organização modular
-
-Pastas padronizadas
-
-🧰 Tecnologias Utilizadas
-
-HTML5
-
-CSS3 (Grid + Flexbox + Design System)
-
-JavaScript ES Modules
-
-Git & GitHub
-
-VS Code + Live Server
-
-💡 Como Executar
+```bash
 git clone https://github.com/CauaAndradeX/ONGConnect.git
 cd ONGConnect
 
 # Abrir no VS Code
 code .
 
-# Rodar com Live Server:
+# Executar com Live Server
 Clique com o botão direito no index.html
-→ "Open With Live Server"
-
+→ “Open With Live Server”
 👨‍💻 Autores
-
 Cauã de Andrade Silva
 Nicollas Santana de Sousa
 
-Desenvolvedores Front-End | Criadores do ONGConnect
+Desenvolvedores Front-End | Criadores da ONGConnect
 
 📝 Licença
-
-MIT — uso livre para estudos.
+Licença MIT — livre para fins acadêmicos e educacionais.
 
 “Conectar, apoiar e transformar — esse é o poder do código.”
+
+yaml
+Copiar código
